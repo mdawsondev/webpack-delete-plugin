@@ -1,8 +1,9 @@
 {
   "name": "webpack-delete-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple post-process file deletion for Webpack.",
   "main": "index.js",
+  "repository": "https://github.com/mdawsondev/webpack-delete-plugin",
   "author": "Matt Dawson <mdawsondev@gmail.com> (https://mdawsondev.com)",
   "license": "MIT",
   "dependencies": {

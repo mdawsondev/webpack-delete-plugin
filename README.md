@@ -15,11 +15,11 @@ This plugin runs async after the output has been completed. Use it to delete fil
 module.exports = {
   ...
   plugins: [
-    new WebpackDelete(["./path/file.js", "./path/**/*", "./path/folder/**"])
+    new WebpackDeletePlugin(["./path/file.js", "./path/**/*", "./path/folder/**"])
   ]
 }
 ```
 
 Delete entire folders with `./path/folder/**` - this will delete the folder and everything inside.
 
-WebpackDelete takes a string or array of strings as input.
+WebpackDeletePlugin takes a string or array of strings as input.

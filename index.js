@@ -1,16 +1,14 @@
-function WebpackDelete(options) {
-  WebpackDelete.prototype.apply = function(compiler) {
-    // Setup callback for accessing a compilation:
-    compiler.plugin("emit", function(compilation, callback) {
-      setTimeout(function() {
-        const del = require('del');
-        del(options).then(paths => {
-          console.log('Deleted files and folders:\n', paths.join('\n'));
-        });
-        callback();
-      }, 1000);
+function WebpackDeletePlugin(options) {
+  WebpackDeletePlugin.prototype.apply = function(compiler) {
+    compiler.plugin("done", function(compilation) {
+      
+      const del = require("del");
+      del(options).then(paths => {
+        console.log("\nWebpackDeletePlugin has deleted:\n", paths.join("\n"));
+      });
+
     });    
   };
 }
 
-module.exports = WebpackDelete;
+module.exports = WebpackDeletePlugin;

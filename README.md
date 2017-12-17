@@ -17,7 +17,8 @@ module.exports = {
   plugins: [
     new WebpackDelete(["./path/file.js", "./path/**/*", "./path/folder/**"])
   ]
-}```
+}
+```
 
 Delete entire folders with `./path/folder/**` - this will delete the folder and everything inside.
 
